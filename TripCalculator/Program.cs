@@ -66,3 +66,16 @@ double takeHomePay = grossPay - taxWithheld;
 System.Console.WriteLine("\nGross pay: " + grossPay.ToString("C"));
 System.Console.WriteLine("Tax withheld: " + taxWithheld.ToString("C"));
 System.Console.WriteLine("Take home pay: " + takeHomePay.ToString("C"));
+
+// The Whole Trip - Calculations
+double tripTotal = fuelCost + pizzaCost;
+double costPerPerson = tripTotal / peopleGoing;
+double takeHomePayPerHour = takeHomePay / hoursWorked;
+double hoursNeeded = costPerPerson / takeHomePayPerHour;
+
+// The Whole Trip - Output
+System.Console.WriteLine("\n=== Part 4: The Whole Trip ===");
+System.Console.WriteLine("Trip total: " + tripTotal.ToString("C"));
+System.Console.WriteLine("Cost per person: " + costPerPerson.ToString("C"));
+System.Console.WriteLine("Take home pay per hour: " + takeHomePayPerHour.ToString("C"));
+System.Console.WriteLine("Hours you must work to cover your share: " + hoursNeeded.ToString("F2"));
